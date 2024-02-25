@@ -5,7 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -117,7 +117,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -126,7 +126,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -136,7 +136,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -221,3 +221,13 @@
   new PureCounter();
 
 })()
+
+$(document).ready(function () {
+  const mapTag = `<iframe style="border:0; width: 100%; height: 350px;"
+          src="https://maps.google.com/maps?q=222,%20Al%20shifa%20homeo%20speciality%20clinic,%20FALAKNUMA%20FLATS,%20ROYAL%20AKBAR%20TOWER,%20Al%20Kamar%20Society,%20Vasna%20Telephone%20Exchange,%20Quresh%20Nagar%20Society,%20Juhapura,%20Ahmedabad,%20Gujarat,%20India&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          frameborder="0" allowfullscreen></iframe>`;
+
+  setTimeout(() => {
+    $("#map-container").html(mapTag);
+  }, 3000);
+});
