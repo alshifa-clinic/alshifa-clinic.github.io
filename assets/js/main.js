@@ -229,5 +229,5 @@ $(document).ready(function () {
 
   setTimeout(() => {
     $("#map-container").html(mapTag);
-  }, 3000);
+  }, 4000);
 });
